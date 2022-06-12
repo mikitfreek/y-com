@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+{{!-- <p>Welcome to the {{title}}</p> --}}
+
+{{!-- {{# each products }} --}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div class="caption">
+          <h3>{{ product.title }}</h3>
+            <p class="description">{{{product.description}}}</p>
+            <div class="clearfix">
+            <div class="price pull-left"><i class="fa fa-tag" aria-hidden="true"></i> {{ product.price }} PLN</div>
+              <a href="/add/{{ product.id }}" class="btn btn-default pull-right" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Dodaj do koszyka</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{!-- {{/each}} --}}
+
+{{!-- <span class=\"label label-info\">i5 11gen</span>, 16gb ram, <span class=\"label label-success\">RTX3050</span> --}}

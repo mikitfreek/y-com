@@ -1,0 +1,59 @@
+<h1>{{title}}</h1>
+
+<div class="login page">
+
+            
+            {{!-- <form method="post">
+      <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" />
+      </div>
+      <div>
+        <label for="state">State</label>
+        <select name="state" id="state">
+          <option value="assam">assam</option>
+          <option value="delhi">delhi</option>
+          <option value="odisha">odisha</option>
+          <option value="kashmir">kashmir</option>
+        </select>
+      </div>
+      <input type="submit" value="Push" />
+    </form>
+    <a href="/success">success</a> --}}
+    
+    <form method="post">
+      <div>
+        <label for="username">Nazwa użytkownika</label>
+        <input type="text" id="username" name="username" class="form-control" required />
+      </div>
+      {{!-- <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div> --}}
+      <div>
+        <label for="password">Hasło</label>
+        <input type="password" id="password" name="password" class="form-control" required />
+      </div>
+      <input type="submit" value="Zaloguj się" class="btn btn-success"/>
+      {{# if message }}
+      <span class="label label-danger">{{message}}</span>
+      {{/if}}
+    </form>
+
+    
+    <hr>
+    {{!-- <div class="text-right">
+        <a href="/login/" type="button" class="btn btn-success">Zaloguj</a>
+    </div> --}}
+    {{!-- <hr> --}}
+    <a href="/signup">Nie masz jeszcze konta? Zarejestruj się</a>
+    
+</div>

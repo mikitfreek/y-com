@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+{{# if data }}
+    <h3>Pomyślnie założono konto!</h3>
+    <ul class="list-group">
+            <li class="list-group-item clearfix">
+                <div class="col-xs-12">
+                    Ostatni krok! Na adres: {{ data.email }}<br>
+                    wysłaliśmy wiadomość potwierdzającą.
+                </div>
+            </li>
+        </ul>
+    <hr>
+    <div class="text-right">
+        <a href="/mailconf/{{ data.id }}" type="button" class="btn btn-success">Symulacja potwierdzenia</a>
+    </div>
+{{/if}}

@@ -1,0 +1,23 @@
+{
+  "name": "y-com",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node ./bin/http",
+    "dev": "nodemon ./bin/http"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "debug": "~2.6.3",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.1",
+    "hbs": "^4.2.0",
+    "morgan": "~1.9.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

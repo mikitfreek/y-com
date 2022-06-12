@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+{{# if data }}
+    <div class="account page">
+        <ul class="list-group">
+            <li class="list-group-item clearfix">
+                <div class="col-xs-12 col-md-2">
+                    <strong>{{ data.username }}</strong>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    {{ data.email }}
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    {{ data.fullname }}
+                    {{!-- <span class="badge"></span> --}}
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <em>{{ data.address }}</em>
+                </div>
+            </li>
+        </ul>
+    </div>
+    {{# if message }}
+    <span class="label label-success">{{message}}</span>
+    {{/if}}
+    <hr>
+    <a href="/logout">Wyloguj się</a>
+{{ else }}
+    Brak danych.
+{{/if}}
