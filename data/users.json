@@ -7,32 +7,5 @@
     "email": "mail@example.com",
     "fullname": "Katarzyna Nowak",
     "address": "Sezamkowa 21/37"
-  },
-  {
-    "id": 2,
-    "active": true,
-    "username": "TestAccount1",
-    "password": "test123",
-    "email": "mail@example.com",
-    "fullname": "Katarzyna Nowak",
-    "address": "Sezamkowa 23/2"
-  },
-  {
-    "id": 3,
-    "active": true,
-    "username": "TestAccount2",
-    "password": "test123",
-    "email": "e@ex.com",
-    "fullname": "Siergo Nieto",
-    "address": "Sezamkowa 23/2"
-  },
-  {
-    "id": 4,
-    "active": true,
-    "username": "TestAccount3",
-    "password": "tst123",
-    "email": "a@aaaa.com",
-    "fullname": "Siergo Nigari",
-    "address": "Seszele 30/12"
   }
 ]

@@ -160,10 +160,8 @@ router.get('/login', async (req, res, next) => {
   //     message: "Pending Account. Please Verify Your Email!",
   //   });
   // }
-  // req.session.userid = "TestAccount";
   res.render('account/login', {
-    title: 'Logowanie',
-    // data: cart.getItems()
+    title: 'Logowanie'
   });
 });
 
@@ -174,19 +172,6 @@ router.get('/logout', async (req, res, next) => {
   res.redirect(req.session.returnTo || '/');
   delete req.session.returnTo;
 });
-
-// router.get('/login/:id', async (req, res, next) => {
-//   req.session.userid = req.params.id;
-//   // res.redirect('/login/success');
-//   res.redirect(req.session.returnTo || '/');
-//   delete req.session.returnTo;
-// });
-
-// router.get('/login/success', async (req, res, next) => {
-//   res.redirect(req.session.returnTo || '/');
-//   delete req.session.returnTo;
-// });
-
 
 router.post("/login", async (req, res, next) => {
     const user = users.filter(function (user) {
