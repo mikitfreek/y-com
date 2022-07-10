@@ -15,9 +15,18 @@ module.exports = function Cart(cart) {
     };
 
     this.remove = function(id) {
-        this.totalItems -= this.items[id].quantity;
-        this.totalPrice -= this.items[id].price;
-        delete this.items[id];
+        if (this.items[id].quantity != 1) {
+            this.totalItems -= 1;
+            let prc = this.items[id].price / this.items[id].quantity;
+            this.totalPrice -= prc;
+
+            this.items[id].quantity -= 1;
+            this.items[id].price -= prc;
+        } else { //if last item is deleted
+            this.totalItems -= this.items[id].quantity;
+            this.totalPrice -= this.items[id].price;
+            delete this.items[id];
+        }
     };
     
     this.getItems = function() {

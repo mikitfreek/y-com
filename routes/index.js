@@ -130,6 +130,32 @@ router.get('/checkout', async (req, res, next) => {
   }
 });
 
+router.get('/payment', async (req, res, next) => {
+  req.session.returnTo = req.originalUrl;
+  if (!req.session.userid) {
+    res.redirect('/login');
+  } else {
+    if (!req.session.cart) {
+      return res.render('cart', {
+        products: null
+      });
+    }
+
+    const user = users.filter(function (user) {
+      return user.username == req.session.userid;
+    });
+    const userData = user[0]
+
+    const cart = new Cart(req.session.cart);
+    res.render('checkout', {
+      title: 'Podsumowanie',
+      products: cart.getItems(),
+      totalPrice: cart.totalPrice,
+      data: userData
+    });
+  }
+});
+
 ///////////////////////////////////////
 // account
 ///////////////////////////////////////

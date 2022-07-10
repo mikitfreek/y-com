@@ -14,6 +14,6 @@ npm start
 ```
 Email nie symulacja
 Symulacja płatności
-odejmowanie po 1 produktów z koszyka
+----odejmowanie po 1 produktów z koszyka///
 kategoie produktów i grafiki
 ```
