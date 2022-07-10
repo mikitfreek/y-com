@@ -15,5 +15,7 @@ npm start
 Email nie symulacja
 Symulacja płatności
 ----odejmowanie po 1 produktów z koszyka///
-kategoie produktów i grafiki
+kategoie produktów
+grafiki
+edycja danych konta, też w podsumowaniu inny adres wysyłki
 ```
