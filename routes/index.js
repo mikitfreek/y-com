@@ -44,9 +44,10 @@ router.get('/cat/:cat/:id', async (req, res, next) => {
   const category = req.params.cat;
   const productId = req.params.id;
   const product = products.filter(function (item) {
-    return item.id == productId;
+    return item.id == productId && item.cat == category;
     // add category
   });
+  ////////////////
   res.render('product', {
     title: 'Produkt',
     product: product[0]
@@ -86,6 +87,7 @@ router.get('/add/:id', async (req, res, next) => {
   // res.redirect('/');
 });
 
+//todo
 router.get('/remove/:id', async (req, res, next) => {
   const productId = req.params.id;
   const cart = new Cart(req.session.cart ? req.session.cart : {});

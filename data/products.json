@@ -3,24 +3,28 @@
     "id": 1,
     "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
     "description": "Stylowy laptop...",
-    "price": 4900
+    "price": 4900,
+    "cat": ""
   },
   {
     "id": 2,
     "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
     "description": "Stylowy laptop...",
-    "price": 4900
+    "price": 4900,
+    "cat": ""
   },
   {
     "id": 3,
     "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
     "description": "Stylowy laptop...",
-    "price": 4900
+    "price": 4900,
+    "cat": ""
   },
   {
     "id": 4,
     "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
     "description": "Stylowy laptop...",
-    "price": 4900
+    "price": 4900,
+    "cat": ""
   }
 ]
