@@ -13,6 +13,18 @@ const usersRead = () => users = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
 usersRead();
 const { check, validationResult } = require("express-validator");
 
+// email
+const nodemailer = require('nodemailer');
+  
+const transporter = nodemailer.createTransport({
+  host: "smtp.mailtrap.io",
+  port: 2525,
+  auth: {
+    user: "6559b6b003098d",
+    pass: "0254a0ac2bcfc9"
+  }
+});
+
 ///////////////////////////////////////
 // main pages
 ///////////////////////////////////////
@@ -224,6 +236,13 @@ router.post("/login", async (req, res, next) => {
 
 
 router.get('/signup', async (req, res, next) => {
+  const info = await transporter.sendMail({
+    from: '"Y-com" <noreplay@example.com>', // sender address
+    to: "mailbetha@gmail.com", // list of receivers
+    subject: "Y-com Potwierdzenie adresu email", // Subject line
+    text: "Link", // plain text body
+    html: "<b>Link html</b>", // html body
+  });
   res.render('account/signup', {
     title: 'Rejestracja',
     // data: cart.getItems()
@@ -281,6 +300,8 @@ router.post("/signup",
         title: 'Potwierdzenie adresu email',
         data: userData
       });
+
+      
 
     } else {
       res.render('account/signup', {
