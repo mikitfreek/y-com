@@ -13,6 +13,8 @@ const usersRead = () => users = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
 usersRead();
 const { check, validationResult } = require("express-validator");
 
+const GLOBAL_URL = "http://localhost:3000/"
+
 // email
 const nodemailer = require('nodemailer');
   
@@ -234,7 +236,7 @@ router.post("/login", async (req, res, next) => {
     const userData = user[0]//JSON.parse(user[0])
     // const userData = user.getData()
     if (userData.password == req.body.password) {
-      console.log("aaa " + userData.username)
+      console.log("login: " + userData.username)
       req.session.userid = req.body.username;
       // console.log(req.session.userid)
       res.redirect(req.session.returnTo || '/');
@@ -250,13 +252,13 @@ router.post("/login", async (req, res, next) => {
 
 
 router.get('/signup', async (req, res, next) => {
-  const info = await transporter.sendMail({
-    from: '"Y-com" <noreplay@example.com>', // sender address
-    to: "mailbetha@gmail.com", // list of receivers
-    subject: "Y-com Potwierdzenie adresu email", // Subject line
-    text: "Link", // plain text body
-    html: "<b>Link html</b>", // html body
-  });
+  // const info = await transporter.sendMail({
+  //   from: '"Y-com" <noreplay@example.com>', // sender address
+  //   to: "mailbetha@gmail.com", // list of receivers
+  //   subject: "Y-com Potwierdzenie adresu email", // Subject line
+  //   text: "Link", // plain text body
+  //   html: "<b>Link html</b>", // html body
+  // });
   res.render('account/signup', {
     title: 'Rejestracja',
     // data: cart.getItems()
@@ -310,12 +312,22 @@ router.post("/signup",
       // res.redirect('/signup');
       // delete req.session.returnTo;
 
-      res.render('account/mailconf', {
-        title: 'Potwierdzenie adresu email',
-        data: userData
+      const info = await transporter.sendMail({
+        from: '"Y-com" <noreplay@example.com>', // sender address
+        to: req.body.email, // list of receivers
+        subject: "Y-com Potwierdzenie adresu email", // Subject line
+        text: "Link: " + GLOBAL_URL + "mailconf/" + users.length, // plain text body
+        html: "<b><a href=\"" + GLOBAL_URL + "mailconf/" + users.length + "\">Link</a></b>", // html body
       });
 
-      
+      // res.render('account/mailconf', {
+      //   title: 'Potwierdzenie adresu email',
+      //   data: userData
+      // });
+      res.render('account/signup', {
+        title: 'Pomyślnie zarejestrowano',
+        message: "Na podany adres email została wysłana wiadomość potwierdzająca"
+      });
 
     } else {
       res.render('account/signup', {
