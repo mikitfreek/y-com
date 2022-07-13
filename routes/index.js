@@ -16,12 +16,26 @@ const { check, validationResult } = require("express-validator");
 // email
 const nodemailer = require('nodemailer');
   
-const transporter = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.mailtrap.io",
+//   port: 2525,
+//   auth: {
+//     user: "6559b6b003098d",
+//     pass: "0254a0ac2bcfc9"
+//   }
+// });
+
+require('dotenv').config();
+// console.log(process.env.MAIL_USERNAME)
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    user: "6559b6b003098d",
-    pass: "0254a0ac2bcfc9"
+    type: 'OAuth2',
+    user: process.env.MAIL_USERNAME,
+    pass: process.env.MAIL_PASSWORD,
+    clientId: process.env.OAUTH_CLIENTID,
+    clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN
   }
 });
 
