@@ -4,8 +4,8 @@
     "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
     "description": "Stylowy laptop...",
     "price": 4900,
-    "img": "",
-    "cat": ""
+    "img": "https://a.allegroimg.com/original/11dad3/08a724eb4807a29d1dfd740e9f28/Laptop-ACER-Nitro-5-144Hz-i7-12700H-16GB-RTX3050",
+    "cat": "Laptopy Gamingowe"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Stylowy laptop...",
     "price": 4900,
     "img": "",
-    "cat": ""
+    "cat": "Laptopy Gamingowe"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Stylowy laptop...",
     "price": 4900,
     "img": "",
-    "cat": ""
+    "cat": "Laptopy Gamingowe"
   },
   {
     "id": 4,
@@ -29,6 +29,30 @@
     "description": "Stylowy laptop...",
     "price": 4900,
     "img": "",
-    "cat": ""
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 5,
+    "title": "Laptop 17\" Intel i7 Nvidia RTX3070 16GB RAM 500GB SSD",
+    "description": "Stylowy laptop...",
+    "price": 6300,
+    "img": "",
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 6,
+    "title": "Laptop 17\" Intel i7 Nvidia RTX3080 16GB RAM 500GB SSD",
+    "description": "Stylowy laptop...",
+    "price": 7400,
+    "img": "",
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 7,
+    "title": "Inteligenta Lodówka Intel 16GB RAM POJEMNOŚĆ 2TB!!",
+    "description": "Stylowa lodówka...",
+    "price": 14900,
+    "img": "",
+    "cat": "Inteligentne Lodówki"
   }
 ]

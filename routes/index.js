@@ -67,6 +67,20 @@ router.get('/id/:id', async (req, res, next) => {
   });
 });
 
+router.get('/cat/:cat', async (req, res, next) => {
+  req.session.returnTo = req.originalUrl;
+  const category = req.params.cat;
+  const productsByCat = products.filter(function (item) {
+    return item.cat == category;
+    // add category
+  });
+  ////////////////
+  res.render('index', {
+    title: category,
+    products: productsByCat
+  });
+});
+
 router.get('/cat/:cat/:id', async (req, res, next) => {
   req.session.returnTo = req.originalUrl;
   const category = req.params.cat;
@@ -176,13 +190,68 @@ router.get('/payment', async (req, res, next) => {
 
     const cart = new Cart(req.session.cart);
     res.render('checkout', {
-      title: 'Podsumowanie',
+      title: 'Płatność',
       products: cart.getItems(),
       totalPrice: cart.totalPrice,
       data: userData
     });
   }
 });
+
+router.get('/payment/bliksym', async (req, res, next) => {
+  req.session.returnTo = req.originalUrl;
+  if (!req.session.userid) {
+    res.redirect('/login');
+  } else {
+    if (!req.session.cart) {
+      return res.render('cart', {
+        products: null
+      });
+    }
+
+    const user = users.filter(function (user) {
+      return user.username == req.session.userid;
+    });
+    const userData = user[0]
+
+    const cart = new Cart(req.session.cart);
+    res.render('checkout/bliksym', {
+      title: 'Płatność BLIK',
+      // products: cart.getItems(),
+      // totalPrice: cart.totalPrice,
+      // data: userData
+    });
+  }
+});
+
+router.post("/payment/bliksym",
+  [
+    check("blik", "Too short blik").isLength({ min: 6 }),
+  ],
+  (req, res) => {
+    const err = validationResult(req);
+    console.log(
+      `Posted data: `,
+      req.body,
+      `,\n`,
+      err.mapped()
+    );
+
+    // if (req.blik === "undefined") {
+
+    //   res.render('account/signup', {
+    //     title: 'Pomyślnie zarejestrowano',
+    //     message: "Na podany adres email została wysłana wiadomość potwierdzająca"
+    //   });
+
+    // } else {
+    //   res.render('account/signup', {
+    //     title: 'Rejestracja',
+    //     message: "Nazwa użytkownika jest już zajęta"
+    //   });
+    // }
+  }
+);
 
 ///////////////////////////////////////
 // account
@@ -278,7 +347,7 @@ router.post("/signup",
     check("email", "Wrong email format").isEmail(),
     check("password", "Too short password").isLength({ min: 3 }),
   ],
-  async (req, res) => {
+  (req, res) => {
     const err = validationResult(req);
     console.log(
       `Posted data: `,
@@ -312,7 +381,7 @@ router.post("/signup",
       // res.redirect('/signup');
       // delete req.session.returnTo;
 
-      const info = await transporter.sendMail({
+      const info = transporter.sendMail({
         from: '"Y-com" <noreplay@example.com>', // sender address
         to: req.body.email, // list of receivers
         subject: "Y-com Potwierdzenie adresu email", // Subject line
@@ -338,7 +407,7 @@ router.post("/signup",
   }
 );
 
-router.get('/mailconf/:id', async (req, res, next) => {
+router.get('/mailconf/:id', (req, res, next) => {
   const userId = req.params.id;
 
   users.find(user => user.id == userId).active = true;

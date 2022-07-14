@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const hbs = require('hbs');
+// hbs.handlebars.
 const session = require('express-session');
 
 const index = require('./routes/index');
@@ -13,7 +14,7 @@ const index = require('./routes/index');
 
 const app = express();
 
-// view engine setup
+// view engine
 app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
