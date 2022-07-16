@@ -12,10 +12,13 @@ npm start
 
 ## TODO
 ```
-Email nie symulacja
-Symulacja płatności
+----Email nie symulacja
+-Symulacja płatności
 ----odejmowanie po 1 produktów z koszyka///
-kategoie produktów
-grafiki
+----kategoie produktów///
+----grafiki///
 edycja danych konta, też w podsumowaniu inny adres wysyłki
+
+nowy szablon po rejestracji
+bez potwierdzenia wyswietl info przy logowaniu itd
 ```

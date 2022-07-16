@@ -1,3 +1,5 @@
+const GLOBAL_URL = "http://localhost:3000/"
+
 const express = require('express');
 const router = express.Router();
 
@@ -13,19 +15,8 @@ const usersRead = () => users = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
 usersRead();
 const { check, validationResult } = require("express-validator");
 
-const GLOBAL_URL = "http://localhost:3000/"
-
 // email
 const nodemailer = require('nodemailer');
-  
-// const transporter = nodemailer.createTransport({
-//   host: "smtp.mailtrap.io",
-//   port: 2525,
-//   auth: {
-//     user: "6559b6b003098d",
-//     pass: "0254a0ac2bcfc9"
-//   }
-// });
 
 require('dotenv').config();
 // console.log(process.env.MAIL_USERNAME)
@@ -189,7 +180,7 @@ router.get('/payment', async (req, res, next) => {
     const userData = user[0]
 
     const cart = new Cart(req.session.cart);
-    res.render('checkout', {
+    res.render('checkout/payment', {
       title: 'Płatność',
       products: cart.getItems(),
       totalPrice: cart.totalPrice,
@@ -199,7 +190,7 @@ router.get('/payment', async (req, res, next) => {
 });
 
 router.get('/payment/bliksym', async (req, res, next) => {
-  req.session.returnTo = req.originalUrl;
+  // req.session.returnTo = req.originalUrl;
   if (!req.session.userid) {
     res.redirect('/login');
   } else {
@@ -237,6 +228,43 @@ router.post("/payment/bliksym",
       err.mapped()
     );
 
+    console.log(req.blik)
+    if (req.body.blik === "123456") {
+
+      if (!req.session.cart) {
+        return res.render('cart', {
+          products: null
+        });
+      }
+
+      const user = users.filter(function (user) {
+        return user.username == req.session.userid;
+      });
+      const userData = user[0]
+
+      const cart = new Cart(req.session.cart);
+      res.render('checkout/payment', {
+        title: 'Pomyślnie złożono zamówienie',
+        products: cart.getItems(),
+        totalPrice: cart.totalPrice,
+        data: userData,
+        message: "Płatność została przyjęta, dziękujemy za zakupy w naszym sklepie."
+      });
+    }
+    else {
+
+      res.render('checkout/bliksym', {
+        title: 'Płatność BLIK',
+        message: "Nieprawidłowy kod BLIK"
+      });
+    }
+    // req.session.returnTo = req.originalUrl;
+    // res.redirect(req.session.returnTo || '/');
+    // delete req.session.returnTo;
+
+
+
+
     // if (req.blik === "undefined") {
 
     //   res.render('account/signup', {
@@ -271,6 +299,28 @@ router.get('/account', async (req, res, next) => {
     const userData = user[0]//JSON.parse(user)
 
     res.render('account', {
+      title: 'Moje konto',
+      // data: user.getData()
+      data: userData
+    });
+    // console.log(userData.username)
+  }
+});
+
+router.get('/orders', async (req, res, next) => {
+  req.session.returnTo = req.originalUrl;
+  if (!req.session.userid) {
+    res.redirect('/login');
+  } else {
+    // const user = new User(req.session.userid ? req.session.userid : "");
+    // next();
+
+    const user = users.filter(function (user) {
+      return user.username == req.session.userid;
+    });
+    const userData = user[0]//JSON.parse(user)
+
+    res.render('orders', {
       title: 'Moje konto',
       // data: user.getData()
       data: userData
@@ -318,7 +368,6 @@ router.post("/login", async (req, res, next) => {
     }
   }
 );
-
 
 router.get('/signup', async (req, res, next) => {
   // const info = await transporter.sendMail({
@@ -369,7 +418,8 @@ router.post("/signup",
           password: req.body.password,
           email: req.body.email,
           fullname: req.body.fullname,
-          address: req.body.address
+          address: req.body.address,
+          orders: []
         };
 
       const tmp = users;
@@ -395,7 +445,7 @@ router.post("/signup",
       // });
       res.render('account/signup', {
         title: 'Pomyślnie zarejestrowano',
-        message: "Na podany adres email została wysłana wiadomość potwierdzająca"
+        success: "Na podany adres email została wysłana wiadomość potwierdzająca"
       });
 
     } else {
@@ -433,8 +483,6 @@ router.get('/mailconf/:id', (req, res, next) => {
 });
 
 module.exports = router;
-
-
 
 // app.post("/",
 //   [

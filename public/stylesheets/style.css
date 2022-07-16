@@ -48,5 +48,12 @@ a {
 .page form div input { display: table-cell; }
 
 .thumbnail img {
-  
+  max-height: 315px;
+}
+
+.list-group-item.horizontal {
+  display: flex;
+}
+.list-group-item.horizontal div {
+  margin-right: 2em;
 }

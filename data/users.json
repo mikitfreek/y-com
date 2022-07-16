@@ -6,6 +6,17 @@
     "password": "test123",
     "email": "mail@example.com",
     "fullname": "Katarzyna Nowak",
-    "address": "Sezamkowa 21/37"
+    "address": "Sezamkowa 21/37",
+    "orders": []
+  },
+  {
+    "id": 2,
+    "active": true,
+    "username": "TestAccount0",
+    "password": "test123",
+    "email": "mailbetha@gmail.com",
+    "fullname": "Sergio Nektar",
+    "address": "Seszele 30/12",
+    "orders": []
   }
 ]
