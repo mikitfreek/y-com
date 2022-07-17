@@ -17,6 +17,25 @@
     "email": "mailbetha@gmail.com",
     "fullname": "Sergio Nektar",
     "address": "Seszele 30/12",
-    "orders": []
+    "orders": [
+      {
+        "items": {
+          "1": {
+            "item": {
+              "id": 1,
+              "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
+              "description": "Stylowy laptop...",
+              "price": 4900,
+              "img": "https://a.allegroimg.com/original/11dad3/08a724eb4807a29d1dfd740e9f28/Laptop-ACER-Nitro-5-144Hz-i7-12700H-16GB-RTX3050",
+              "cat": "Laptopy Gamingowe"
+            },
+            "quantity": 1,
+            "price": 4900
+          }
+        },
+        "totalItems": 1,
+        "totalPrice": 4900
+      }
+    ]
   }
 ]

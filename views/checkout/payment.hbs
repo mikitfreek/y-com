@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 {{# if message }}
     <span class="label label-success">{{message}}</span>
-{{ else }}
+{{/if}}
 {{# if products }}
     <div class="cart page">
         <ul class="list-group">
@@ -45,11 +45,12 @@
                 </div>
             </li>
         </ul>
+    {{# unless message }}
     <hr>
     <div class="text-right">
         <a href="/payment/bliksym" type="button" class="btn btn-success">Płatność blikiem</a>
     </div>
-    {{/if}}
+    {{/unless}}
 {{ else }}
     Koszyk jest pusty.
 {{/if}}

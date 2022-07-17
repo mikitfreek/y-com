@@ -99,6 +99,7 @@ router.get('/cart', async (req, res, next) => {
     });
   }
   const cart = new Cart(req.session.cart);
+  // console.log(req.session.cart);
   res.render('cart', {
     title: 'Koszyk',
     products: cart.getItems(),
@@ -237,12 +238,22 @@ router.post("/payment/bliksym",
         });
       }
 
+      const userId = req.session.userid;
+
       const user = users.filter(function (user) {
-        return user.username == req.session.userid;
+        return user.username == userId;
       });
-      const userData = user[0]
+      const userData = user[0];
 
       const cart = new Cart(req.session.cart);
+
+      // user[0].orders.push(cart)
+
+      users.find(user => user.username === userId).orders.push(cart);
+
+      const json = JSON.stringify(users, null, 2);
+      fs.writeFileSync(usersFile, json, 'utf8', usersRead);
+
       res.render('checkout/payment', {
         title: 'Pomyślnie złożono zamówienie',
         products: cart.getItems(),
@@ -261,23 +272,6 @@ router.post("/payment/bliksym",
     // req.session.returnTo = req.originalUrl;
     // res.redirect(req.session.returnTo || '/');
     // delete req.session.returnTo;
-
-
-
-
-    // if (req.blik === "undefined") {
-
-    //   res.render('account/signup', {
-    //     title: 'Pomyślnie zarejestrowano',
-    //     message: "Na podany adres email została wysłana wiadomość potwierdzająca"
-    //   });
-
-    // } else {
-    //   res.render('account/signup', {
-    //     title: 'Rejestracja',
-    //     message: "Nazwa użytkownika jest już zajęta"
-    //   });
-    // }
   }
 );
 
@@ -320,10 +314,12 @@ router.get('/orders', async (req, res, next) => {
     });
     const userData = user[0]//JSON.parse(user)
 
+    const cart = new Cart(userData.orders[0]);
+
     res.render('orders', {
       title: 'Moje konto',
-      // data: user.getData()
-      data: userData
+      products: cart.getItems(),
+      totalPrice: cart.totalPrice
     });
     // console.log(userData.username)
   }
