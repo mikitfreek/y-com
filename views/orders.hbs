@@ -1,4 +1,20 @@
 <h1>{{title}}</h1>
+
+<ul class="list-group">
+  <li class="list-group-item clearfix products-categories horizontal">
+    <div>
+      <a href="/account">
+        <strong>Moje dane</strong>
+      </a>
+    </div>
+    <div>
+      <a href="/orders">
+        <strong>Moje zamówienia</strong>
+      </a>
+    </div>
+  </li>
+</ul>
+
 {{# if products }}
     <div class="cart page">
         <ul class="list-group">
@@ -31,5 +47,5 @@
         <a href="/checkout" type="button" class="btn btn-success">Przejdz do podsumowania</a>
     </div> --}}
 {{ else }}
-    Koszyk jest pusty.
+    Jeszcze nic nie zamówiłeś/aś.
 {{/if}}
