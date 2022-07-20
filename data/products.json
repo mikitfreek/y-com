@@ -8,51 +8,123 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 2,
-    "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
-    "description": "Stylowy laptop...",
+    "id": 2, 
+    "title": "Lenovo Legion 5-15 R5/16GB/512 RTX3060 165Hz",
+    "description": "Zwyciężaj z laptopem Legion 5. Jest uzbrojony we wszystko, co potrzebne do dominacji nad wszelkimi przeciwnikami",
+    "price": 4990,
+    "img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/3/pr_2022_3_25_8_43_26_84_00.jpg",
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 3, 
+    "title": "Laptop DELL G15 15.6 cali i5-12500H 16GB RAM 512GB SSD GeForce RTX3050",
+    "description": "Poznaj laptopa Dell G15, następcę kultowych modeli G3 i G5, o 15.6 calowym ekranie i odświeżaniu do 165 Hz.",
+    "price": 5300,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/36/3652949/Laptop-DELL-G15-5520-front.jpg",
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 4, 
+    "title": "Gigabyte A5 R5-5600H/16GB/512 RTX3060 144Hz",
+    "description": "Gotuj się do walki. Gamingowy laptop Gigabyte A5 wprowadzi Cię na pola wirtualnych bitew, oddając do dyspozycji arsenał, który poprowadzi Cię do niezliczonych zwycięstw.",
     "price": 4900,
-    "img": "",
+    "img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/5/pr_2022_5_31_11_14_17_428_05.jpg",
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 3,
-    "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
-    "description": "Stylowy laptop...",
+    "id": 5, 
+    "title": "HP OMEN Ryzen 7-5800H/16GB/512 RX6600M 144Hz",
+    "description": "Oszałamiający wygląd to nie wszystko, ponieważ laptop ten zapewnia także wyjątkowy komfort grania.",
     "price": 4900,
-    "img": "",
+    "img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/1/pr_2022_1_18_10_3_53_336_00.jpg",
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 4,
-    "title": "Laptop 15\" Intel i7 Nvidia RTX3050 16GB RAM 500GB SSD",
-    "description": "Stylowy laptop...",
-    "price": 4900,
-    "img": "",
+    "id": 6, 
+    "title": "ASUS ROG Strix G15 R7-4800H/16GB/512 RTX3050 144Hz",
+    "description": "Wejdź do gry i poczuj smak zwycięstwa dzięki najnowszej platformie RTX z architekturą NVIDIA Ampere.",
+    "price": 4099,
+    "img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/9/pr_2021_9_23_7_51_24_571_00.jpg",
     "cat": "Laptopy Gamingowe"
   },
-  {
-    "id": 5,
-    "title": "Laptop 17\" Intel i7 Nvidia RTX3070 16GB RAM 500GB SSD",
-    "description": "Stylowy laptop...",
-    "price": 6300,
-    "img": "",
-    "cat": "Laptopy Gamingowe"
-  },
-  {
-    "id": 6,
-    "title": "Laptop 17\" Intel i7 Nvidia RTX3080 16GB RAM 500GB SSD",
-    "description": "Stylowy laptop...",
-    "price": 7400,
-    "img": "",
-    "cat": "Laptopy Gamingowe"
-  },
-  {
-    "id": 7,
+  { 
+    "id": 7, 
     "title": "Inteligenta Lodówka Intel 16GB RAM POJEMNOŚĆ 2TB!!",
     "description": "Stylowa lodówka...",
     "price": 14900,
     "img": "",
     "cat": "Inteligentne Lodówki"
-  }
+  },
+  {
+    "id": 8, 
+    "title": "Samsung Side-by-Side, Family Hub™ 593 L",
+    "description": "Family Hub™ - lodówka multimedialna",
+    "price": 8990,
+    "img": "https://images.samsung.com/is/image/samsung/p6pim/pl/rs68n8941sl-ef/gallery/pl-side-by-side-rs68n8941b1ef-rs68n8941sl-ef-379536065?$2052_1641_PNG$",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 9, 
+    "title": "Lodówka LG GBB62PZHMN No frost 203cm Srebrna",
+    "description": "KOMPAKTOWA KONSTRUKCJA PREMIUM - ELEGANCKI I PRAKTYCZNY MINIMALIZM",
+    "price": 2290,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/25/2521028/Lodowka-LG-GBB62PZMN-front-zamnieta-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 10, 
+    "title": "Lodówka BOSCH KGN49LBEA No frost 203cm Czarna",
+    "description": "Lodówka BOSCH KGN49LBEA Nofrost pozwala na dłużej zachować świeżość przechowywanej w niej żywności",
+    "price": 3990,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/26/2610385/Lodowka-BOSCH-KGN49LBEA-Nofrost-Czarna-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 11, 
+    "title": "Lodówka LG GSJV31WBXF Side by Side",
+    "description": "Idealny mikroklimat w każdym miejscu Twojej lodówki",
+    "price": 4999,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/35/3528197/Lodowka-LG-GSJV31WBXF-Side-by-Side-No-frost-179-cm-Czarna-Podajnik-wody-Kostkarka-zamknieta-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 12, 
+    "title": "Lodówka LG GSXV90MCAE Side by side",
+    "description": "Aplikacja LG ThinQ™ umożliwia połączenie się z lodówką w sposób inny niż kiedykolwiek wcześniej. Włącz „Ekspresowe zamrażanie” jednym naciśnięciem przycisku.",
+    "price": 7499,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/33/3317198/Lodowka-LG-GSXV90MCAE-Side-by-side-Kostkarka-front-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 13, 
+    "title": "Lodówka SAMSUNG RS6HA8891B1 EF Family Hub Side by Side",
+    "description": "Praktyczność i elegancja Nadaj swojej kuchni elegancki wygląd, który odzwierciedla bieżące trendy prostej i czystej formy. Wyjątkowa 2-drzwiowa chłodziarko-zamrażarka Samsung.",
+    "price": 8999,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/27/2751529/Lodowka-SAMSUNG-RS6HA8891B1-EF-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 14, 
+    "title": "Lodówka MIELE KS 28463",
+    "description": "odówka MIELE KS 28463 D BB posiada klasę energetyczną A+++ dzięki wydajnemu obiegowi chłodzącemu oraz materiałów do izolacji. ",
+    "price": 10349,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/20/2047973/Lodowka-MIELE-KS-28463-D-EDCS-front-smartfon.jpg",
+    "cat": "Inteligentne Lodówki"
+  },
+  {
+    "id": 15, 
+    "title": "Laptop HP Victus 16-D0583NW 16.1 i5-11400 8GB RAM 512GB SSD GeForce RTX3050 ",
+    "description": "Graj i zwyciężaj w wielkim stylu",
+    "price": 4300,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/36/3674988/Laptop-HP-Victus-16-D0583NW-front.jpg",
+    "cat": "Laptopy Gamingowe"
+  },
+  {
+    "id": 16, 
+    "title": "Laptop ASUS TUF Gaming F15 FX506HE 15.6 cali 144Hz i5-11400H 16GB RAM 512GB SSD GeForce RTX3050Ti",
+    "description": "Laptop ASUS Tuf Gaming F15 został stworzony z myślą o zapalonych graczach.",
+    "price": 3800,
+    "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/37/3744446/Laptop-ASUS-TUF-Gaming-F15-FX506HE-15.6-IPS-144Hz-i5-11400H-16GB-RAM-512GB-SSD-GeForce-RTX3050Ti-front.jpeg",
+    "cat": "Laptopy Gamingowe"
+  }  
 ]

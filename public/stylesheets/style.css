@@ -57,3 +57,5 @@ a {
 .list-group-item.horizontal div {
   margin-right: 2em;
 }
+
+.caption h3 {height: 3em}
