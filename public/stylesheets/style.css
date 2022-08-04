@@ -48,7 +48,8 @@ a {
 .page form div input { display: table-cell; }
 
 .thumbnail img {
-  max-height: 315px;
+  height: 315px;
+  width: auto;
 }
 
 .list-group-item.horizontal {
@@ -58,4 +59,4 @@ a {
   margin-right: 2em;
 }
 
-.caption h3 {height: 3em}
+.caption h3 {height: 4em}
