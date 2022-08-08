@@ -8,8 +8,8 @@
             {{# each products }}
             <li class="list-group-item clearfix">
                 <div class="col-xs-5">
-                    <strong>{{ this.item.title }}</strong><br/>
-                    <em>{{{this.item.description}}}</em>
+                    <strong><a href="/id/{{ this.items.id }}">{{ this.item.title }}</a></strong><br/>
+                    {{!-- <em>{{{this.item.description}}}</em> --}}
                 </div>
                 <div class="col-xs-2 text-right">
                     <span class="badge">{{ this.quantity }}</span>

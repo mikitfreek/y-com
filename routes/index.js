@@ -314,14 +314,20 @@ router.get('/orders', async (req, res, next) => {
     });
     const userData = user[0]//JSON.parse(user)
 
-    const cart = new Cart(userData.orders[0]);
+    if (typeof userData.orders[0] !== 'undefined') {
+      const cart = new Cart(userData.orders[0]);
 
-    res.render('orders', {
-      title: 'Moje konto',
-      products: cart.getItems(),
-      totalPrice: cart.totalPrice
-    });
-    // console.log(userData.username)
+      res.render('orders', {
+        title: 'Moje konto',
+        products: cart.getItems(),
+        totalPrice: cart.totalPrice
+      });
+    } else {
+      res.render('orders', {
+        title: 'Moje konto',
+      });
+    }
+      // console.log(userData.username)
   }
 });
 
@@ -335,13 +341,13 @@ router.post('/login', async (req, res, next) => {
   const user = users.filter(function (user) {
     return user.username == req.body.username;
   });
-  if (user.status != 'Active') {
+  const userData = user[0]//JSON.parse(user[0])
+  if (userData.active === false) {
     return res.status(401).render('account/login',{
       title: 'Logowanie',
       message: 'Najpierw zweryfikuj konto. Na skrzynce mailowej czeka na Ciebie wiadomość weryfikacyjna!',
     });
   } else {
-    const userData = user[0]//JSON.parse(user[0])
     // const userData = user.getData()
     if (userData.password == req.body.password) {
       console.log('login: ' + userData.username)
@@ -409,7 +415,7 @@ router.post('/signup',
       return user.username == req.body.username;
     });
 
-    if (typeof user[0].email !== 'undefined') {
+    if (typeof user[0] !== 'undefined') {
       res.render('account/signup', {
         title: 'Rejestracja',
         message: 'Konto z tym adresem email już istnieje'

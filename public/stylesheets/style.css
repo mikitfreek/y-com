@@ -47,10 +47,18 @@ a {
 .page form div label { display: table-cell; }
 .page form div input { display: table-cell; }
 
-.thumbnail img {
+.thumbnail .img {
   height: 315px;
-  width: auto;
+  /* width: auto; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+/* .thumbnail img {
+  height: 100%;
+  width: auto;
+} */
 
 .list-group-item.horizontal {
   display: flex;
@@ -60,3 +68,11 @@ a {
 }
 
 .caption h3 {height: 4em}
+
+@media screen and (max-width: 1400px) {
+  .caption h3 {font-size: 1.2em}
+}
+
+@media screen and (max-width: 991px) {
+  .caption h3 {font-size: 1.5em}
+}
