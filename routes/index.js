@@ -1,4 +1,4 @@
-const GLOBAL_URL = "http://localhost:3000/"
+const GLOBAL_URL = 'http://localhost:3000/'
 
 const express = require('express');
 const router = express.Router();
@@ -13,7 +13,7 @@ const usersFile = './data/users.json';
 let users = [];
 const usersRead = () => users = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
 usersRead();
-const { check, validationResult } = require("express-validator");
+const { check, validationResult } = require('express-validator');
 
 // email
 const nodemailer = require('nodemailer');
@@ -216,9 +216,9 @@ router.get('/payment/bliksym', async (req, res, next) => {
   }
 });
 
-router.post("/payment/bliksym",
+router.post('/payment/bliksym',
   [
-    check("blik", "Too short blik").isLength({ min: 6 }),
+    check('blik', 'Too short blik').isLength({ min: 6 }),
   ],
   (req, res) => {
     const err = validationResult(req);
@@ -230,7 +230,7 @@ router.post("/payment/bliksym",
     );
 
     console.log(req.blik)
-    if (req.body.blik === "123456") {
+    if (req.body.blik === '123456') {
 
       if (!req.session.cart) {
         return res.render('cart', {
@@ -259,14 +259,14 @@ router.post("/payment/bliksym",
         products: cart.getItems(),
         totalPrice: cart.totalPrice,
         data: userData,
-        message: "Płatność została przyjęta, dziękujemy za zakupy w naszym sklepie."
+        message: 'Płatność została przyjęta, dziękujemy za zakupy w naszym sklepie.'
       });
     }
     else {
 
       res.render('checkout/bliksym', {
         title: 'Płatność BLIK',
-        message: "Nieprawidłowy kod BLIK"
+        message: 'Nieprawidłowy kod BLIK'
       });
     }
     // req.session.returnTo = req.originalUrl;
@@ -284,7 +284,7 @@ router.get('/account', async (req, res, next) => {
   if (!req.session.userid) {
     res.redirect('/login');
   } else {
-    // const user = new User(req.session.userid ? req.session.userid : "");
+    // const user = new User(req.session.userid ? req.session.userid : '');
     // next();
 
     const user = users.filter(function (user) {
@@ -306,7 +306,7 @@ router.get('/orders', async (req, res, next) => {
   if (!req.session.userid) {
     res.redirect('/login');
   } else {
-    // const user = new User(req.session.userid ? req.session.userid : "");
+    // const user = new User(req.session.userid ? req.session.userid : '');
     // next();
 
     const user = users.filter(function (user) {
@@ -326,14 +326,36 @@ router.get('/orders', async (req, res, next) => {
 });
 
 router.get('/login', async (req, res, next) => {
-  if (user.status != "Active") {
-    return res.status(401).send({
-      message: "Najpierw zweryfikuj konto. Na skrzynce mailowej czeka na Ciebie wiadomość weryfikacyjna!",
-    });
-  }
   res.render('account/login', {
     title: 'Logowanie'
   });
+});
+
+router.post('/login', async (req, res, next) => {
+  const user = users.filter(function (user) {
+    return user.username == req.body.username;
+  });
+  if (user.status != 'Active') {
+    return res.status(401).render('account/login',{
+      title: 'Logowanie',
+      message: 'Najpierw zweryfikuj konto. Na skrzynce mailowej czeka na Ciebie wiadomość weryfikacyjna!',
+    });
+  } else {
+    const userData = user[0]//JSON.parse(user[0])
+    // const userData = user.getData()
+    if (userData.password == req.body.password) {
+      console.log('login: ' + userData.username)
+      req.session.userid = req.body.username;
+      // console.log(req.session.userid)
+      res.redirect(req.session.returnTo || '/');
+      delete req.session.returnTo;
+    } else {
+      res.render('account/login', {
+        title: 'Logowanie',
+        message: 'Nieprawidłowe dane'
+      });
+    }
+  }
 });
 
 router.get('/logout', async (req, res, next) => {
@@ -344,34 +366,13 @@ router.get('/logout', async (req, res, next) => {
   delete req.session.returnTo;
 });
 
-router.post("/login", async (req, res, next) => {
-    const user = users.filter(function (user) {
-      return user.username == req.body.username;
-    });
-    const userData = user[0]//JSON.parse(user[0])
-    // const userData = user.getData()
-    if (userData.password == req.body.password) {
-      console.log("login: " + userData.username)
-      req.session.userid = req.body.username;
-      // console.log(req.session.userid)
-      res.redirect(req.session.returnTo || '/');
-      delete req.session.returnTo;
-    } else {
-      res.render('account/login', {
-        title: 'Logowanie',
-        message: "Nieprawidłowe dane"
-      });
-    }
-  }
-);
-
 router.get('/signup', async (req, res, next) => {
   // const info = await transporter.sendMail({
-  //   from: '"Y-com" <noreplay@example.com>', // sender address
-  //   to: "mailbetha@gmail.com", // list of receivers
-  //   subject: "Y-com Potwierdzenie adresu email", // Subject line
-  //   text: "Link", // plain text body
-  //   html: "<b>Link html</b>", // html body
+  //   from: ''Y-com' <noreplay@example.com>', // sender address
+  //   to: 'mailbetha@gmail.com', // list of receivers
+  //   subject: 'Y-com Potwierdzenie adresu email', // Subject line
+  //   text: 'Link', // plain text body
+  //   html: '<b>Link html</b>', // html body
   // });
   res.render('account/signup', {
     title: 'Rejestracja',
@@ -381,16 +382,16 @@ router.get('/signup', async (req, res, next) => {
   // delete req.session.returnTo;
 });
 
-router.post("/signup",
+router.post('/signup',
   [
     check(
-      "username",
-      "Too short username"
+      'username',
+      'Too short username'
     ).isLength({
       min: 3,
     }),
-    check("email", "Wrong email format").isEmail(),
-    check("password", "Too short password").isLength({ min: 3 }),
+    check('email', 'Wrong email format').isEmail(),
+    check('password', 'Too short password').isLength({ min: 3 }),
   ],
   (req, res) => {
     const err = validationResult(req);
@@ -402,10 +403,18 @@ router.post("/signup",
     );
 
     const user = users.filter(function (user) {
+      return user.email == req.body.email;
+    });
+    const _user = users.filter(function (user) {
       return user.username == req.body.username;
     });
 
-    if (typeof user[0] === "undefined") {
+    if (typeof user[0].email !== 'undefined') {
+      res.render('account/signup', {
+        title: 'Rejestracja',
+        message: 'Konto z tym adresem email już istnieje'
+      });
+    } else if (typeof _user[0] === 'undefined') {
 
       const userData = {
           id: users.length + 1,
@@ -430,9 +439,9 @@ router.post("/signup",
       const info = transporter.sendMail({
         from: '"Y-com" <noreplay@example.com>', // sender address
         to: req.body.email, // list of receivers
-        subject: "Y-com Potwierdzenie adresu email", // Subject line
-        text: "Link: " + GLOBAL_URL + "mailconf/" + users.length, // plain text body
-        html: "<b><a href=\"" + GLOBAL_URL + "mailconf/" + users.length + "\">Link</a></b>", // html body
+        subject: 'Y-com Potwierdzenie adresu email', // Subject line
+        text: 'Link: ' + GLOBAL_URL + 'mailconf/' + users.length, // plain text body
+        html: '<b><a href=\'' + GLOBAL_URL + 'mailconf/' + users.length + '\'>Link</a></b>', // html body
       });
 
       // res.render('account/mailconf', {
@@ -441,13 +450,13 @@ router.post("/signup",
       // });
       res.render('account/signup', {
         title: 'Pomyślnie zarejestrowano',
-        success: "Na podany adres email została wysłana wiadomość potwierdzająca"
+        success: 'Na podany adres email została wysłana wiadomość potwierdzająca'
       });
 
     } else {
       res.render('account/signup', {
         title: 'Rejestracja',
-        message: "Nazwa użytkownika jest już zajęta"
+        message: 'Nazwa użytkownika jest już zajęta'
       });
     }
   }
@@ -472,7 +481,7 @@ router.get('/mailconf/:id', (req, res, next) => {
   res.render('account', {
     title: 'Moje konto',
     data: userData,
-    message: "Pomyślnie potwierdzono adres email"
+    message: 'Pomyślnie potwierdzono adres email'
   });
   // res.redirect(req.session.returnTo || '/');
   // delete req.session.returnTo;
@@ -480,16 +489,16 @@ router.get('/mailconf/:id', (req, res, next) => {
 
 module.exports = router;
 
-// app.post("/",
+// app.post('/',
 //   [
 //     check(
-//       "username",
-//       "Too short username"
+//       'username',
+//       'Too short username'
 //     ).isLength({
 //       min: 3,
 //     }),
-//     check("email", "Wrong email format").isEmail(),
-//     check("password", "Too short password").isLength({ min: 3 }),
+//     check('email', 'Wrong email format').isEmail(),
+//     check('password', 'Too short password').isLength({ min: 3 }),
 //   ],
 //   (req, res) => {
 //     const errors = validationResult(req);
@@ -509,11 +518,11 @@ module.exports = router;
 //       .save()
 //       .then(() => {
 //         errors.mapped();
-//         res.render("success");
+//         res.render('success');
 //         // res.send(`Wallah, Bro check your console & db collection`);
 //       })
 //       .catch((err) => {
-//         res.render("error");
+//         res.render('error');
 //         // res.send(`Uff, we've some error for you - ${err.message}`);
 //       });
 //   }
