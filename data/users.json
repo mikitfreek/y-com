@@ -14,7 +14,7 @@
     "active": true,
     "username": "TestAccount0",
     "password": "test123",
-    "email": "mail@gmail.com",
+    "email": "mail1@gmail.com",
     "fullname": "Sergio Nektar",
     "address": "Seszele 30/12",
     "orders": [
@@ -53,7 +53,7 @@
     "active": true,
     "username": "TestAccount12",
     "password": "haslo",
-    "email": "bethapolska@gmail.com",
+    "email": "mail3@gmail.com",
     "fullname": "Admin",
     "address": "Seszele 30/12",
     "orders": [
