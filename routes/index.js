@@ -326,11 +326,11 @@ router.get('/orders', async (req, res, next) => {
 });
 
 router.get('/login', async (req, res, next) => {
-  // if (user.status != "Active") {
-  //   return res.status(401).send({
-  //     message: "Pending Account. Please Verify Your Email!",
-  //   });
-  // }
+  if (user.status != "Active") {
+    return res.status(401).send({
+      message: "Najpierw zweryfikuj konto. Na skrzynce mailowej czeka na Ciebie wiadomość weryfikacyjna!",
+    });
+  }
   res.render('account/login', {
     title: 'Logowanie'
   });
