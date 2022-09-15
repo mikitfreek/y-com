@@ -446,8 +446,8 @@ router.post('/signup',
         from: '"Y-com" <noreplay@example.com>', // sender address
         to: req.body.email, // list of receivers
         subject: 'Y-com Potwierdzenie adresu email', // Subject line
-        text: 'Link: ' + GLOBAL_URL + 'mailconf/' + users.length, // plain text body
-        html: '<b><a href=\'' + GLOBAL_URL + 'mailconf/' + users.length + '\'>Link</a></b>', // html body
+        text: 'Link aktywacyjny konta: ' + GLOBAL_URL + 'mailconf/' + users.length, // plain text body
+        html: 'Link aktywacyjny konta: <b><a href=\'' + GLOBAL_URL + 'mailconf/' + users.length + '\'>Link</a></b>', // html body
       });
 
       // res.render('account/mailconf', {

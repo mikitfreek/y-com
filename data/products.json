@@ -8,7 +8,7 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 2, 
+    "id": 2,
     "title": "Lenovo Legion 5-15 R5/16GB/512 RTX3060 165Hz",
     "description": "Zwyciężaj z laptopem Legion 5. Jest uzbrojony we wszystko, co potrzebne do dominacji nad wszelkimi przeciwnikami",
     "price": 4990,
@@ -16,7 +16,7 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 3, 
+    "id": 3,
     "title": "Laptop DELL G15 15.6 cali i5-12500H 16GB RAM 512GB SSD GeForce RTX3050",
     "description": "Poznaj laptopa Dell G15, następcę kultowych modeli G3 i G5, o 15.6 calowym ekranie i odświeżaniu do 165 Hz.",
     "price": 5300,
@@ -24,7 +24,7 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 4, 
+    "id": 4,
     "title": "Gigabyte A5 R5-5600H/16GB/512 RTX3060 144Hz",
     "description": "Gotuj się do walki. Gamingowy laptop Gigabyte A5 wprowadzi Cię na pola wirtualnych bitew, oddając do dyspozycji arsenał, który poprowadzi Cię do niezliczonych zwycięstw.",
     "price": 4900,
@@ -32,7 +32,7 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 5, 
+    "id": 5,
     "title": "HP OMEN Ryzen 7-5800H/16GB/512 RX6600M 144Hz",
     "description": "Oszałamiający wygląd to nie wszystko, ponieważ laptop ten zapewnia także wyjątkowy komfort grania.",
     "price": 4900,
@@ -40,15 +40,15 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 6, 
+    "id": 6,
     "title": "ASUS ROG Strix G15 R7-4800H/16GB/512 RTX3050 144Hz",
     "description": "Wejdź do gry i poczuj smak zwycięstwa dzięki najnowszej platformie RTX z architekturą NVIDIA Ampere.",
     "price": 4099,
     "img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/9/pr_2021_9_23_7_51_24_571_00.jpg",
     "cat": "Laptopy Gamingowe"
   },
-  { 
-    "id": 7, 
+  {
+    "id": 7,
     "title": "Inteligenta Lodówka Intel 16GB RAM POJEMNOŚĆ 2TB!!",
     "description": "Stylowa lodówka...",
     "price": 14900,
@@ -56,7 +56,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 8, 
+    "id": 8,
     "title": "Samsung Side-by-Side, Family Hub™ 593 L",
     "description": "Family Hub™ - lodówka multimedialna",
     "price": 8990,
@@ -64,7 +64,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 9, 
+    "id": 9,
     "title": "Lodówka LG GBB62PZHMN No frost 203cm Srebrna",
     "description": "KOMPAKTOWA KONSTRUKCJA PREMIUM - ELEGANCKI I PRAKTYCZNY MINIMALIZM",
     "price": 2290,
@@ -72,7 +72,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 10, 
+    "id": 10,
     "title": "Lodówka BOSCH KGN49LBEA No frost 203cm Czarna",
     "description": "Lodówka BOSCH KGN49LBEA Nofrost pozwala na dłużej zachować świeżość przechowywanej w niej żywności",
     "price": 3990,
@@ -80,7 +80,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 11, 
+    "id": 11,
     "title": "Lodówka LG GSJV31WBXF Side by Side",
     "description": "Idealny mikroklimat w każdym miejscu Twojej lodówki",
     "price": 4999,
@@ -88,7 +88,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 12, 
+    "id": 12,
     "title": "Lodówka LG GSXV90MCAE Side by side",
     "description": "Aplikacja LG ThinQ™ umożliwia połączenie się z lodówką w sposób inny niż kiedykolwiek wcześniej. Włącz „Ekspresowe zamrażanie” jednym naciśnięciem przycisku.",
     "price": 7499,
@@ -96,7 +96,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 13, 
+    "id": 13,
     "title": "Lodówka SAMSUNG RS6HA8891B1 EF Family Hub Side by Side",
     "description": "Praktyczność i elegancja Nadaj swojej kuchni elegancki wygląd, który odzwierciedla bieżące trendy prostej i czystej formy. Wyjątkowa 2-drzwiowa chłodziarko-zamrażarka Samsung.",
     "price": 8999,
@@ -104,7 +104,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 14, 
+    "id": 14,
     "title": "Lodówka MIELE KS 28463",
     "description": "odówka MIELE KS 28463 D BB posiada klasę energetyczną A+++ dzięki wydajnemu obiegowi chłodzącemu oraz materiałów do izolacji. ",
     "price": 10349,
@@ -112,7 +112,7 @@
     "cat": "Inteligentne Lodówki"
   },
   {
-    "id": 15, 
+    "id": 15,
     "title": "Laptop HP Victus 16-D0583NW 16.1 i5-11400 8GB RAM 512GB SSD GeForce RTX3050 ",
     "description": "Graj i zwyciężaj w wielkim stylu",
     "price": 4300,
@@ -120,11 +120,139 @@
     "cat": "Laptopy Gamingowe"
   },
   {
-    "id": 16, 
+    "id": 16,
     "title": "Laptop ASUS TUF Gaming F15 FX506HE 15.6 cali 144Hz i5-11400H 16GB RAM 512GB SSD GeForce RTX3050Ti",
     "description": "Laptop ASUS Tuf Gaming F15 został stworzony z myślą o zapalonych graczach.",
     "price": 3800,
     "img": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/37/3744446/Laptop-ASUS-TUF-Gaming-F15-FX506HE-15.6-IPS-144Hz-i5-11400H-16GB-RAM-512GB-SSD-GeForce-RTX3050Ti-front.jpeg",
     "cat": "Laptopy Gamingowe"
-  }  
+  },
+  {
+    "id": 17,
+    "title": "Komputer SPeC Game X G300, Core i5-10400F, 16 GB, RTX 3060, 512 GB",
+    "description": "Sprawdzone, przetestowane w grach i testach obciążeniowych, komputery Game X są majstersztykiem sztuki konfigurowania zestawów PC. Niezależnie, który model Game X wybierzesz, masz pewność otrzymania idealnej jednostki dla graczy.",
+    "price": 4649,
+    "img": "https://images.morele.net/i1064/5949049_0_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 18,
+    "title": "HP Pavilion Gaming TG01, Ryzen 5 4600G, 16 GB, RTX 3060, 512 GB",
+    "description": "Jednostka stworzona dla graczy, odznacza się wysoką wydajnością w grach. Dzięki procesorowi Ryzen 5 oraz karcie graficznej RTX 3060, komputer pozwoli na granie w najwyższych detalach.",
+    "price": 4099,
+    "img": "https://images.morele.net/i1064/10069154_0_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 19,
+    "title": "Game X G300 White, Core i3-12100F, 16 GB, RTX 3070, 512 GB",
+    "description": "Przy zakupie karty graficznej RTX z serii 30. Dzięki usłudze GeForce NOW ulepszysz nie tylko gaming PC. ",
+    "price": 4999,
+    "img": "https://images.morele.net/i1064/10082500_6_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 20,
+    "title": "MSI MAG Codex X5 10SF-081PL, Core i7-10700K, 16 GB, RTX 2080 Ti, 1 TB",
+    "description": "Gamingowy desktop z serii MAG Codex 5 przeznaczony jest dla początkujących i zaawansowanych graczy.",
+    "price": 8499,
+    "img": "https://images.morele.net/i1064/5947508_0_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 21,
+    "title": "Game X G500, Core i5-10400F, 16 GB, RTX 3070, 1 TB",
+    "description": "Postaw na starannie dobrane komponenty i świetnie zaaranżowane wnętrze, które są wynikiem pracy naszych konstruktorów. Ta wybitna jednostka zapewni Ci doskonałą płynność podczas gry w popularne tytuły.",
+    "price": 5149,
+    "img": "https://images.morele.net/i1064/5948562_14_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 22,
+    "title": " Game X G500 White, Core i5-10400F, 16 GB, RTX 3060, 512 GB",
+    "description": "Wysoka jakość produktu widoczna jest już z zewnątrz. Funkcjonalna i przeszklona obudowa z przezroczystym panelem cechuje się otworami wentylacyjnymi w kształcie heksagonu.",
+    "price": 4749,
+    "img": "https://images.morele.net/i1064/5948951_3_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 23,
+    "title": "HP Omen 25L GT12, Core i7-11700, 16 GB, RTX 3060 Ti, 1 TB",
+    "description": "Gamingowa maszyna, napędzana procesorem i7 - najnowszej, 11 generacji wraz z RTX'em 3060 Ti zapewni najlepsze wrażenia z najbardziej wymagających, nowych gier.",
+    "price": 6099,
+    "img": "https://images.morele.net/i1064/10320478_0_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 24,
+    "title": "Game X G900, Ryzen 7 5800X, 32 GB, RTX 3080 Ti, 2 TB",
+    "description": "Ten najlepszy model z serii Morele Game X cechuje się ponadnormatywną wydajnością, stabilnością i niezawodnością, którą potwierdzają testy naszych ekspertów.",
+    "price": 13699,
+    "img": "https://images.morele.net/i1064/9892163_0_i1064.jpg",
+    "cat": "Komputery Stacjonarne"
+  },
+  {
+    "id": 25,
+    "title": "CHŁODZIARKA,MAŁA LODÓWKA CZARNA",
+    "description": "Mała, praktyczna, niewielkich rozmiarów chłodziarka typu minibar z komorą zero, pozwalającą osiągać temperatury poniżej 0 stopni.",
+    "price": 599,
+    "img": "https://a.allegroimg.com/s720/11ffc5/436370324ef8ab9c29de90fb5e20/CHLODZIARKA-HOTELOWA-MINIBAR-MALA-LODOWKA-CZARNA",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 26,
+    "title": "Lodówka jednodrzwiowa Beko TS 190330 N",
+    "description": "Lodówka BEKO posiada dodatkową strefę z niższą temperaturą, niż w pozostałej części chłodziarki.",
+    "price": 800,
+    "img": "https://a.allegroimg.com/s1024/11d7c1/d9cc0e854a6796a2abc9f74d8c3d/MALA-CHLODZIARKA-LODOWKA-PODBLATOWA-82cm-86L-Marka-Beko",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 27,
+    "title": "Mała wydajna lodówka chłodziarka",
+    "description": "Już na pierwszy rzut oka chłodziarka retro wyróżnia się unikalnym designem. Stylizowana na produkt „retro” spełnia jednocześnie najnowsze standardy dla sprzętów AGD.",
+    "price": 700,
+    "img": "https://a.allegroimg.com/s1024/117278/e4143e9e444a9092bcc2e1248a59/Mala-wydajna-lodowka-chlodziarka-hotelowa-MiniBar",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 28,
+    "title": "ESMEE chłodziarka",
+    "description": "Zadbaliśmy nie tylko o design! Cooler Ésmee to przede wszystkim produkt dbający o naszą przyrodę, pozbawiony jest szkodliwych gazów",
+    "price": 300,
+    "img": "https://a.allegroimg.com/s1024/11d8fa/7f782905434e9d8a3ff7aab0919c/ESMEE-chlodziarka-mini-lodowka-kosmetyki-skin-care-Marka-inna",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 29,
+    "title": "Chłodziarka Royal Catering",
+    "description": "W wolnostojącej lodówce do wina od Royal Catering możesz schłodzić i zaprezentować soki, wodę, napoje bezalkoholowe, alkohole itp.",
+    "price": 1567,
+    "img": "https://a.allegroimg.com/s1024/112d45/379dcb1845b3918deca686866e99/LODOWKA-NA-WINO-PIWO-NAPOJE-88-LITROW-28-BUTELEK-Informacje-dodatkowe-oswietlenie-LED",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 30,
+    "title": "Chłodziarka do wina MIDEA",
+    "description": "Urządzenie jest wyposażone w nowoczesne i eleganckie oświetlenie wnętrza, ułatwiające dostrzeżenie przechowywanych produktów.",
+    "price": 799,
+    "img": "https://a.allegroimg.com/s1024/11b2dd/b4236cd047dca832ec34315f0f48/Chlodziarka-do-wina-piwa-lodowka-na-24-butelki-EAN-GTIN-6940461916561",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 31,
+    "title": "Chłodziarka do wina Haier",
+    "description": "Chłodziarka HAIER HWS49GA została wyposażona w boczne i górne oświetlenie LED 3D w ciepłym kolorze,",
+    "price": 2399,
+    "img": "https://a.allegroimg.com/s1024/11ed7b/f958c5bd496c8285413a076802c7/CHLODZIARKA-DO-WINA-HAIER-HWS49GA",
+    "cat": "Chłodziarki Lodoherbaty"
+  },
+  {
+    "id": 32,
+    "title": "Chłodziarka MPM",
+    "description": "Mimo niewielkich rozmiarów chłodziarka MPM posiada optymalnie zaprojektowane wnętrze i pojemność 127 litrów netto.",
+    "price": 899,
+    "img": "https://a.allegroimg.com/s720/110a96/0e41e3ca4dfe9cf1c4628eb24931/Chlodziarka-MPM-131-CJ-18-AA",
+    "cat": "Chłodziarki Lodoherbaty"
+  }
 ]

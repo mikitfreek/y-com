@@ -76,5 +76,44 @@
         "totalPrice": 5300
       }
     ]
+  },
+  {
+    "id": 5,
+    "active": false,
+    "username": "TestAccount1",
+    "password": "haslo",
+    "email": "mailbetha@gmail.com",
+    "fullname": "Sergio Nektar",
+    "address": "Seszele 30/12",
+    "orders": []
+  },
+  {
+    "id": 6,
+    "active": true,
+    "username": "TestAccount2",
+    "password": "haslo",
+    "email": "bethapolska@gmail.com",
+    "fullname": "Admin",
+    "address": "Seszele 30/12",
+    "orders": [
+      {
+        "items": {
+          "3": {
+            "item": {
+              "id": 3,
+              "title": "Laptop DELL G15 15.6 cali i5-12500H 16GB RAM 512GB SSD GeForce RTX3050",
+              "description": "Poznaj laptopa Dell G15, następcę kultowych modeli G3 i G5, o 15.6 calowym ekranie i odświeżaniu do 165 Hz.",
+              "price": 5300,
+              "img": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/36/3652949/Laptop-DELL-G15-5520-front.jpg",
+              "cat": "Laptopy Gamingowe"
+            },
+            "quantity": 1,
+            "price": 5300
+          }
+        },
+        "totalItems": 1,
+        "totalPrice": 5300
+      }
+    ]
   }
 ]

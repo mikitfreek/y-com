@@ -55,10 +55,12 @@ a {
   background-size: contain;
 }
 
-/* .thumbnail img {
-  height: 100%;
-  width: auto;
-} */
+.thumbnail .pimg {
+  height: 55vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .list-group-item.horizontal {
   display: flex;

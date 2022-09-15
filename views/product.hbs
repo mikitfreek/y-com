@@ -6,10 +6,17 @@
     <div class="col-md-12">
       <div class="thumbnail">
         {{# if product.img }}
+        <div class="pimg" style="background-image:url('{{ product.img }}')"></div>
+        {{!-- <img src="{{ this.img }}" title="thumbnail" /> --}}
+        {{ else }}
+        <div class="pimg" style="background-image:url('https://placeholder.pics/svg/300/DEDEDE/555555/Zdj%C4%99cie%20niedost%C4%99pne')"></div>
+        {{!-- <img src="https://via.placeholder.com/420x315" title="thumbnail" /> --}}
+        {{/if}}
+        {{!-- {{# if product.img }}
         <img src="{{ product.img }}" title="thumbnail" />
         {{ else }}
         <img src="https://placeholder.pics/svg/800x600/DEDEDE/555555/Zdj%C4%99cie%20niedost%C4%99pne" title="thumbnail" />
-        {{/if}}
+        {{/if}} --}}
 
         <div class="caption">
           <h3>{{ product.title }}</h3>
