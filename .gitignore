@@ -3,14 +3,7 @@
 # Dependencies
 /node_modules
 
-# IntelliJ
-.idea/
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
 # dotenv
-.env
+# .env
 
 DETAILS.md
